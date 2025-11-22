@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 console.log("connected to db ")
-mongoose.connect("mongodb+srv://shubham:wNowKTyAm8E6EKbN@cluster0.vxy54d3.mongodb.net/udemy");
+mongoose.connect("");
 // or const { Schema } = require("mongoose")
 const ObjectId = mongoose.Types.ObjectId;
 
@@ -9,7 +9,7 @@ const ObjectId = mongoose.Types.ObjectId;
 const User = new Schema({
     firstName : String ,
     lastName : String ,
-    email : {type : String , unique : true} ,
+    email : String ,//{type : String , unique : true} ,
     password : String
 });
 
@@ -45,5 +45,6 @@ module.exports = ({
 UserModel:UserModel,
 AdminModel :AdminModel,
 CoursesModel : CoursesModel, 
-PurchasesModel :PurchasesModel
+PurchasesModel :PurchasesModel,
+mongoose
 })
