@@ -1,3 +1,6 @@
+require("dotenv").config();
+
+
 const express = require("express");
 const app = express();
 const { userRouter } = require("./routes/user");
@@ -13,7 +16,7 @@ app.use("/course"  , courseRouter);
 app.use("/admin"  , adminRouter);
 
  async function main(){
-    await mongoose.connect("mongodb+srv://shubham:wNowKTyAm8E6EKbN@cluster0.vxy54d3.mongodb.net/udemy");
+    await mongoose.connect(process.env.MONGO_URL);
     app.listen(3000);
 }
 
