@@ -95,6 +95,7 @@ adminRouter.put("/course" , adminMiddleware ,  async function( req , res){
         courseId :  course._id
     })
 });
+
 adminRouter.get("/course/bulk" , adminMiddleware , async function( req , res){
     const adminId = req.creatorId ; 
 
@@ -107,6 +108,7 @@ adminRouter.get("/course/bulk" , adminMiddleware , async function( req , res){
         courses
     })
 })
+
 adminRouter.delete("/course" , function( req , res){
     res.json({
         message : "your course is deleted"
