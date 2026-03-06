@@ -15,6 +15,9 @@ app.use("/user"  , userRouter);
 app.use("/course"  , courseRouter);
 app.use("/admin"  , adminRouter);
 
+const cors = require("cors");
+app.use(cors());
+
  async function main(){
     await mongoose.connect(process.env.MONGO_URL);
     app.listen(3000);
