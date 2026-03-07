@@ -1,37 +1,48 @@
 export default function Hero() {
   return (
-    <section className="text-center py-24 px-6 bg-gray-50 flex">
-      <div>
-        <p className="text-black">Join 100,000+ enrolled students today</p>
-        <h1 className="flex justify-start text-4xl md:text-6xl text-blue-950 font-bold max-w-4xl mx-auto">
-          Master Full Stack Development
-        </h1>
+    <section className="bg-white min-h-screen flex items-center">
+      <div className="px-35 flex items-center justify-between gap-12 w-full">
+        <div className="flex-1">
 
-        <p className="mt-6 text-lg text-gray-600 max-w-2xl mx-auto">
-          Master Full Stack Development through hands-on open source projects.
-          Join a community of developers transforming their careers with practical,
-          real-world programming skills.
-        </p>
-        <a
-          href="/courses"
-          className="px-6 py-3 bg-black text-white rounded-lg"
-        >
-          Explore Courses
-        </a>
+          <div className="inline-flex items-center gap-3 border border-dashed border-gray-400 rounded-full px-5 py-2 text-sm text-gray-700 mb-6">
+            <span className="w-3 h-3 bg-teal-500 rounded-full"></span>
+            Join 100,000+ enrolled students today
+          </div>
 
-        <a
-          href="#about"
-          className="px-6 py-3 border rounded-lg"
-        >
-          Learn More
-        </a>
-      </div>
-      <div>
-        <img
-          src="/kirat.png"
-          alt="Hero Image"
-          className="w-150 h-auto rounded-lg shadow-md"
-        />
+          <h1 className="text-7xl font-bold text-blue-950">
+            Master Full Stack <br />
+            Development
+          </h1>
+
+          <p className="text-gray-600 mt-4 text-md max-w-xl">
+            Master Full Stack Development through hands-on open source projects.
+            Join a community of developers transforming their careers with
+            practical, real-world programming skills.
+          </p>
+
+          <div className="flex gap-4 mt-8">
+            <button className="px-6 py-3 border border-gray-400 rounded-lg text-gray-700 hover:bg-gray-200 transition">
+              Learn more
+            </button>
+
+            <button className="px-6 py-3 bg-blue-950 text-white rounded-lg hover:bg-blue-800 transition">
+              Explore Courses
+            </button>
+          </div>
+
+        </div>
+
+        <div className="flex-1 items-end">
+          <div className="relative">
+            
+            <img
+              src="/kirat.png"
+              alt="hero"
+              className="rounded-3xl w-140 h-120"
+            />
+          </div>
+        </div>
+
       </div>
     </section>
   );
