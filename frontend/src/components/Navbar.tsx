@@ -15,7 +15,7 @@ export default function Navbar() {
       </div>
       <div className="flex space-x-2">
         <SearchInput/>
-        <button className="border border-gray-400 rounded-lg shadow-2xl text-sm px-4">Sign up</button>
+        <button className="border border-gray-400 rounded-lg shadow-2xl text-sm text-blue-950 px-4">Sign up</button>
         <button className="border border-gray-400 rounded-lg shadow-2xl text-sm px-4 bg-blue-950 text-white">Log in</button>
       </div>
     </div>

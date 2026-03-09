@@ -4,7 +4,7 @@ export default function Hero() {
       <div className="px-35 flex items-center justify-between gap-12 w-full">
         <div className="flex-1">
 
-          <div className="inline-flex items-center gap-3 border border-dashed border-gray-400 rounded-full px-5 py-2 text-sm text-gray-700 mb-6">
+          <div className="inline-flex items-center gap-3 border border-dashed border-gray-400 rounded-full px-5 py-1 text-sm text-gray-700 mb-6">
             <span className="w-3 h-3 bg-teal-500 rounded-full"></span>
             Join 100,000+ enrolled students today
           </div>
@@ -14,7 +14,7 @@ export default function Hero() {
             Development
           </h1>
 
-          <p className="text-gray-600 mt-4 text-md max-w-xl">
+          <p className="text-gray-600 mt-1 text-md max-w-xl">
             Master Full Stack Development through hands-on open source projects.
             Join a community of developers transforming their careers with
             practical, real-world programming skills.
