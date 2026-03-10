@@ -3,7 +3,7 @@ import SearchInput from "./search";
 export default function Navbar() {
   
   return (
-    <div className="bg-white text-black flex justify-between items-center px-35 py-4 border border-gray-300 shadow-lg">
+    <div className="bg-white text-black flex justify-between items-center px-35 py-4 border border-gray-300 shadow-lg sticky top-0 z-50">
       <div className="flex space-x-6">
         <div className="font-bold text-lg">100
           <span className="text-red-600">x</span>Devs</div>
