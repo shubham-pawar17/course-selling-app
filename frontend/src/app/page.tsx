@@ -1,10 +1,11 @@
 import CTA from "../components/CTA";
-import FeatureCard from "../components/FeatureCard";
+import FeatureCard from "../components/WhyCard";
 import FeaturedCohorts from "../components/FeaturedCohorts";
 import Footer from "../components/Footer";
 import Hero from "../components/Hero";
 import Navbar from "../components/Navbar";
 import Stats from "../components/Stats";
+import WhyCard from "../components/WhyCard";
 
 export default function Home() {
   return (
@@ -12,13 +13,7 @@ export default function Home() {
       <Navbar />
       <Hero />
       <Stats />
-      <FeatureCard
-        feature={{
-          title: "Learn by Doing",
-          description: "Hands-on projects and real-world experience",
-          active: true,
-        }}
-      />
+      <WhyCard/>
       <FeaturedCohorts />
       <CTA />
       <Footer />

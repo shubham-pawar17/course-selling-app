@@ -1,5 +1,5 @@
 import { useState } from "react"
-import FeatureCard from "./FeatureCard"
+import FeatureCard from "./WhyCard"
 
 const features = [
   {
