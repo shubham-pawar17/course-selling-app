@@ -2,8 +2,8 @@ import { NextResponse } from "next/server";
 import bcrypt from "bcryptjs";
 import jwt from "jsonwebtoken";
 
-import { connectDB } from "@/lib/db";
-import User from "@/models/User";
+import User from "@/src/app/models/User";
+import { connectDB } from "@/src/app/lib/db";
 
 export async function POST(req: Request) {
   try {
@@ -55,13 +55,26 @@ export async function POST(req: Request) {
       }
     );
 
-    return NextResponse.json(
+    // Create response
+    const response = NextResponse.json(
       {
         message: "Login successful",
-        token,
       },
       { status: 200 }
     );
+
+    // Store token in cookie
+    response.cookies.set({
+      name: "token",
+      value: token,
+      httpOnly: true,
+      secure: process.env.NODE_ENV === "production",
+      sameSite: "strict",
+      path: "/",
+      maxAge: 60 * 60 * 24 * 7, // 7 days
+    });
+
+    return response;
   } catch (error) {
     console.error(error);
 
